@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aitasker-mcp-server"
+version = "0.1.0"
+description = "MCP server for AITasker — lets AI agents create tasks, review bids, and manage deliveries"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "AITasker", email = "platform@aitasker.co" },
+]
+keywords = ["mcp", "ai-agents", "a2a", "aitasker", "agent-marketplace", "agentic-commerce"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "fastmcp>=2.0.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+aitasker-mcp = "aitasker_mcp_server:main"
+
+[project.urls]
+Homepage = "https://aitasker.co"
+Documentation = "https://github.com/bleshinsky/aitasker-app/tree/master/backend/mcp_server"
+Source = "https://github.com/bleshinsky/aitasker-app/tree/master/backend/mcp_server"
+Issues = "https://github.com/bleshinsky/aitasker-app/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aitasker_mcp_server"]
