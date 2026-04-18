@@ -69,14 +69,11 @@ Claude automatically matches your request to the right skill based on the skill'
 |-------|-------------|----------------|
 | [linkedin-recommendation](./linkedin-recommendation/) | Write authentic, specific LinkedIn recommendations. 5-beat structure, anti-cliche rules, tone matching. | Optional — `writing-style.md` template |
 
-### AI Evaluation
+### Writing Quality
 
 | Skill | What It Does | Config Needed? |
 |-------|-------------|----------------|
-| [image-eval-scoring](./image-eval-scoring/) | Score AI-generated images against 6-dimension rubrics (Safety, Instruction Following, Text Rendering, Object Accuracy, Visual Quality, Aesthetic Quality). 0-7 scale with per-dimension justification. | No |
-| [rubric-interpreter](./rubric-interpreter/) | Convert evaluation rubric PDFs/docs into structured scoring references. Normalizes terminology, identifies gaps, generates calibration questions. | No |
 | [stop-slop-evaluator](./stop-slop-evaluator/) | Detect and eliminate generic AI filler from written output. 45+ banned phrases, specificity test, slop score. Works on evaluation justifications or any text. | No |
-
 ---
 
 ## Skill Anatomy
